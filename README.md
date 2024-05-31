@@ -5,11 +5,12 @@
 > 抓包截取项目中的数据库请求并解析成相应的语句，如mysql协议会解析为sql语句,便于调试。
 > 不要修改代码，直接嗅探项目中的数据请求。
 
-[![GitHub license](https://img.shields.io/github/license/40t/go-sniffer.svg?style=popout-square)](https://github.com/40t/go-sniffer/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/40t/go-sniffer.svg?style=popout-square)](https://github.com/anoxia/go-sniffer/blob/master/LICENSE)
 
 #### [中文使用说明](#中文使用说明)
 
-## Support List:
+## Support List
+
 - [mysql](#mysql)
 - [Redis](#redis)
 - [Http](#http)
@@ -17,35 +18,48 @@
 - Kafka (developing)
 - ...
 
-## Demo:
+## Demo
+
 ``` bash
-$ go-sniffer en0 mysql
+go-sniffer en0 mysql
 ```
-![image](https://github.com/40t/go-sniffer/raw/master/images/demo.gif)
-## Setup:
+
+![image](https://github.com/anoxia/go-sniffer/raw/master/images/demo.gif)
+
+## Setup
+
 - support : `MacOS` `Linux` `Unix`
 - not support : `windows`
 - If you encounter problems in the `go get` process, try upgrading the go version （如果go get 过程中遇到问题，请尝试升级go版本）
 
 ### Centos
+
 ``` bash
-$ yum -y install libpcap-devel
+yum -y install libpcap-devel
 ```
+
 ### Ubuntu
+
 ``` bash
-$ apt-get install libpcap-dev
+apt-get install libpcap-dev
 ```
+
 ### MacOs
+
 ``` bash
 
 ```
+
 ### RUN
+
 ``` bash
-$ go get -v -u github.com/40t/go-sniffer
-$ cp -rf $(go env GOPATH)/bin/go-sniffer /usr/local/bin
-$ go-sniffer
+go get -v -u github.com/anoxia/go-sniffer
+cp -rf $(go env GOPATH)/bin/go-sniffer /usr/local/bin
+go-sniffer
 ```
-## Usage:
+
+## Usage
+
 ``` bash
 ==================================================================================
 [Usage]
@@ -72,6 +86,7 @@ $ go-sniffer
 ```
 
 #### 中文使用说明
+
 ``` bash
 =======================================================================
 [使用说明]
@@ -98,12 +113,15 @@ $ go-sniffer
 =======================================================================
 ```
 
-### Example:
+### Example
+
 ``` bash
-$ go-sniffer lo0 mysql 
-$ go-sniffer en0 redis 
-$ go-sniffer eth0 http -p 8080
-$ go-sniffer eth1 mongodb
+go-sniffer lo0 mysql 
+go-sniffer en0 redis 
+go-sniffer eth0 http -p 8080
+go-sniffer eth1 mongodb
 ```
-## License:
+
+## License
+
 [MIT](http://opensource.org/licenses/MIT)
